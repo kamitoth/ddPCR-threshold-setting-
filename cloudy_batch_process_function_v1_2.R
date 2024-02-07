@@ -10,8 +10,7 @@ fu <- function(location=choose.dir(),
                sVol = ifelse(!is.na(sV2),sV2, 5),
                df = readline("What is the dilution factor?"),
                dilf = as.numeric(unlist(df))){
-setwd("U:/Laboratories/NAA Lab/Project RESULTS/RESEARCH/ddPCR-master")
-source("read_QX_600mod.R")
+source("https://raw.githubusercontent.com/kamitoth/ddPCR-threshold-setting-/main/read_QX_600mod.R")
 source("https://raw.githubusercontent.com/Gromgorgel/ddPCR/master/Cloudy-V3-07.R")
 # Read the data file. Change "directory" to the path to the Amplitude data. The script will automatically read all *.csv files in the folder. 
 data <- read.QX(location, nr.r = NA, autoname = TRUE)
