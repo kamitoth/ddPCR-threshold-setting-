@@ -60,7 +60,7 @@ The function output is 1) a table in RStudio and 2) a resultsChx.xlsx (where x= 
 - `threshold`, a numerical of length 1, the fluorescence value used as threshold
 - copy number concentrations a) in the diluted sample (`ccp_diluted_sample`) b) in the PCR solution (`ccp_pcr_solution`) and c) in the original sample if the dilution factor is given (`ccp_per_unit`)
 
-Some of these components are pasted into the clipboard and with Ctrl+V can be pasted into a form or empty excel sheet. These components are: well (plate location), threshold level, positive, negative and total analysed partitions. 
+Some of these components are automatically copied into the clipboard and with Ctrl+V can be pasted into a form or empty excel sheet. These components are: well (plate location), threshold level, positive, negative and total analysed partitions. 
 
 Warning
 -
