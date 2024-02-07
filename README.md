@@ -2,7 +2,7 @@
 
 What is it?
 -
-This is a simplified and user friendly algorithm for consistent threshold setting and analysis of ddPCR data.
+This is a simplified and user friendly algorithm for consistent threshold setting and analysis of ddPCR data based on the [cloudy v3.07 algorithm](https://github.com/Gromgorgel/ddPCR/blob/master/Cloudy-V3-07.R) of Aanton Lievens.
 
 Requirements
 -
