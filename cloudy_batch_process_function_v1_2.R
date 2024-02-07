@@ -31,7 +31,7 @@ if(all(well == "all") && any(unlist(lapply(data, function(x) dim(x)[2] > 1))))  
   df <- rep(dilf, ncol(results))
   results <- rbind(results,df)
   ccp_diluted_sample <- round(results["targ.in.sVol",]/sVol,digits=0)
-  ccp_pcr_solution <- round(results["targ.in.sVol",]/(20/sVol), digits=0)
+  ccp_pcr_solution <- round(results["targ.in.sVol",]/20, digits=0)
 #calculating copies per unit and adding it to results
 # change 5 to the actual volume of sample per well in ?L 
   cp_per_unit <- round(results["targ.in.sVol",]/sVol*results["df",], digits=0)
@@ -44,7 +44,7 @@ else{
   df <- rep(dilf, nrow(results))
   results <- cbind(results,df)
   ccp_diluted_sample <- round(results[,"targ.in.sVol"]/sVol,digits=0)
-  ccp_pcr_solution <- round(results[,"targ.in.sVol"]/(20/sVol), digits=0)
+  ccp_pcr_solution <- round(results[,"targ.in.sVol"]/20, digits=0)
   cp_per_unit <- round(results[,"targ.in.sVol"]/sVol*results[,"df"], digits=0)
   warning <- ifelse(accepted < 10000, "less than 10000 accepted droplets","")
   results <- cbind(results, accepted=accepted, ccp_diluted_sample=ccp_diluted_sample, ccp_pcr_solution=ccp_pcr_solution, cp_per_unit=cp_per_unit, warning=warning)
