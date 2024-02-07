@@ -49,3 +49,15 @@ The threshold is set slightly above the negative cloud for each individual well.
 The algorithm is the cloudy v3.07 that was developed by Aanton Lievens. A limited feature version was created to make the analysis simpler and more user-friendly.  
 More information about the threshold settings can be found in his [publication](https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0153317) and [github page](https://github.com/Gromgorgel/ddPCR):
 
+Output
+-
+The function output is 1) a table in RStudio and 2) a resultsChx.xlsx (where x= 1 or 2) file with the following components:
+- `targets.in.sVol`, a numerical vector of length three containing the estimated number of targets in the sample volume (`targ.in.sVol`) and its Poisson confidence bounds (`upper`, `lower`).
+- `lambda`, a numerical vector of length three containing the estimated average number of targets per compartment (`lambda`) and its Poisson confidence bounds (`upper`, `lower`).
+- `performance`, a numerical vector of length three containing the performance paramters calculated from the input data: `resolution`, ratio of rain to total compartments (`%rain`), and the degree of compartmentalization (`%comparted`)
+- `droplets`, a numerical vector of length three containing the number of compartments counted in each category (`positive`, `negative`, `accepted` & `rain`).
+- `populations`, a numerical of length 1, the number of fluorescence populations as detected by the algorithm 
+- `threshold`, a numerical of length 1, the fluorescence value used as threshold
+- copy number concentrations a) in the diluted sample (`ccp_diluted_sample`) b) in the PCR solution (`ccp_pcr_solution`) and c) in the original sample if the dilution factor is given (`ccp_per_unit`)
+
+Some of these components are pasted into the clipboard and with Ctrl+V can be pasted into a form or empty excel sheet. These components are: well (plate location), threshold level, positive, negative and total analysed partitions. 
