@@ -61,3 +61,10 @@ The function output is 1) a table in RStudio and 2) a resultsChx.xlsx (where x= 
 - copy number concentrations a) in the diluted sample (`ccp_diluted_sample`) b) in the PCR solution (`ccp_pcr_solution`) and c) in the original sample if the dilution factor is given (`ccp_per_unit`)
 
 Some of these components are pasted into the clipboard and with Ctrl+V can be pasted into a form or empty excel sheet. These components are: well (plate location), threshold level, positive, negative and total analysed partitions. 
+
+Warning
+-
+The algorithm might fail to set the threshold correctly if...
+- the data quality is poor (e.g. there are many different populations or the separation between positive and positive droplets is inadequate)
+- there are very few positive or negative droplets
+In these situations, it is recommended to manually overwrite the threshold or discard the data and reanalyse the sample(s).
