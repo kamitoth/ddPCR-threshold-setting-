@@ -12,9 +12,9 @@ Software:
 
 How does it work?
 -
-The algorithm starts by running a single line of code in RStudio that is saved in:
-- call_cloudy_batch_process_function_v1_2.R   
-but also can be pasted from here:
+The algorithm starts by running a single line of code in RStudio that can be copied from:
+- [here](https://github.com/kamitoth/ddPCR-threshold-setting-/blob/main/call_cloudy_batch_process_function_v1_2.R)   
+or here:
 ```
 source("https://raw.githubusercontent.com/kamitoth/ddPCR-threshold-setting-/main/cloudy_batch_process_function_v1_2.R", encoding="latin1")
 ```
@@ -29,7 +29,7 @@ Please note that the amplitude data folder must contain only *.csv files that we
    - Select the single well that you want to analyse (e.g. B05) or leave it blank to analyse the entire plate.
 3) What is the droplet volume (nL; default = 0.797 nL)?
    - Specify the droplet volume in nL. The default option is 0.797 nL that was experimentally determined for the 'One Step RT PCR Mix'.  
-   Other options are:
+   Other frequent possibilities are:
    - 0.771 nL determined for regular PCR Mix without DUTP
    - 0.834 nL is used for regular PCR Mix (with DUTP)
    - The Biorad default for ALL of their mastermixes is 0.795 nL (as of 07/02/2024)
