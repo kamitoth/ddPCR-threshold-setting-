@@ -13,10 +13,10 @@ Software:
 How does it work?
 -
 The algorithm starts by running a single line of code in RStudio that can be copied from:
-- [here](https://github.com/kamitoth/ddPCR-threshold-setting-/blob/main/call_cloudy_batch_process_function_v1_2.R)   
+- [here](https://github.com/kamitoth/ddPCR-threshold-setting-/blob/main/call_cloudy_batch_process_function_v1_3.R)   
 or here:
 ```
-source("https://raw.githubusercontent.com/kamitoth/ddPCR-threshold-setting-/main/cloudy_batch_process_function_v1_2.R", encoding="latin1")
+suppressPackageStartupMessages(source("https://raw.githubusercontent.com/kamitoth/ddPCR-threshold-setting-/main/cloudy_batch_process_function_v1_3.R", encoding="latin1"))
 ```
 Run the code in RStudio!
 #### It requires to select the folder where the amplitude data are saved and five questions need to be answered in the RSudio console!  
